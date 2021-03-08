@@ -23,8 +23,9 @@
             <img src="user.jpg" alt="not loaded" style="width: 100%;height:250px;border-radius:5%;">
             <div class="card-body">
               <h3 style="text-align: center;font-style: italic;" > User</h3>
+              
               <button type="button" class="btn btn-primary  mt-3" data-toggle="modal" data-target="#ulog" > Login with phone number </button>
-              <button type="button" class="btn btn-primary  mt-3" > Login  </button>
+              <button type="button" class="btn btn-primary  mt-3" > Login <img src="https://www.freepngimg.com/thumb/google/66903-google-pay-gboard-platform-logo-cloud.png" alt="sdfhg" width="30px"> </button>
             </div>
           </div>
           <!--def-->
@@ -86,8 +87,8 @@
             <div class="card-body">
               <h3 style="text-align: center;font-style: italic;" > Hospital</h3>
               
-              <button type="button" class="btn btn-primary float-left mt-3 " > Creat account </button>
-              <button type="button" class="btn btn-primary float-right mt-3" > Login with phone number  </button>
+              <button type="button" class="btn btn-primary float-left" > Creat account </button>
+              <button type="button" class="btn btn-primary float-right" > Login with phone number  </button>
             </div>
           </div>
   </diV>
@@ -151,7 +152,7 @@ function render() {
 function phoneAuth() {
   //get the number
   var number=document.getElementById('number').value;
-  var number="+91"+number;
+  alert()
   //phone number authentication function of firebase
   //it takes two parameter first one is number,,,second one is recaptcha
   firebase.auth().signInWithPhoneNumber(number,window.recaptchaVerifier).then(function (confirmationResult) {
